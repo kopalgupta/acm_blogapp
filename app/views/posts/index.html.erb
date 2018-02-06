@@ -2,6 +2,10 @@
 
 <!-- We'll loop through all posts to display them -->
 <% @posts.each do |post| %>
-	<h3><%= post.title %></h3>
-	<p><%= post.body %></p>
+	<div class="well">
+		<h3><%= post.title %></h3>
+		<p><%= post.body %></p>
+		<%= link_to "Read More", post_path(post), :class => 'btn btn-default' %>
+	</div>
+
 <% end %>
